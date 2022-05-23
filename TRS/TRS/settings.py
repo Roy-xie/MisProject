@@ -76,8 +76,8 @@ WSGI_APPLICATION = 'TRS.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-import pymysql# 一定要新增這兩行！通過pip install pymysql！
-pymysql.install_as_MySQLdb()
+# import pymysql# 一定要新增這兩行！通過pip install pymysql！
+# pymysql.install_as_MySQLdb()
 
 DATABASES = {
     'default': {
