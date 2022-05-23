@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- 導入 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css ">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="{% static 'css/body.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  
+</head>
+<body>
+
+  <section>
+    <div class="container">
+      <div class="Left">
+        <!-- 學年 -->
+        <div class="group">
+          <div class="title">學年度</div>
+          <div class="multi_select_box">
+            <select multiple title="請選擇學年度" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+                <option value="">106</option>
+                <option value="">107</option>
+                <option value="">108</option>
+                <option value="">109</option>
+                <option value="">110</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 設立別 -->
+        <div class="group">
+          <div class="title">設立別</div>
+          <div class="multi_select_box">
+            <select multiple title="請選擇公私立" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+                <option value="">公立</option>
+                <option value="">私立</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 學校類別 -->
+        <div class="group">
+          <div class="title">學制</div>
+          <div class="multi_select_box">
+            <select multiple title="請選擇學制" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+                <option value="">一般大學</option>
+                <option value="">技專學校</option>
+                <option value="">宗教研修學校</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 學校名稱 -->
+        <div class="group">
+          <div class="title">學校名稱</div>
+          <div class="multi_select_box">
+            <select multiple title="請選擇學校" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+                <option value=""></option>
+            </select>
+          </div>
+        </div>
+
+        
+      </div>
+      <div class="Right"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  
+  
+  <script>
+
+    function show(anything){
+      document.querySelector('.textBox').value = anything;
+    }
+
+    let dropdown = document.querySelector('.dropdown');
+    dropdown.onclick = function(){
+      dropdown.classList.toggle('active')
+    }
+
+  </script>
+</body>
+</html>
