@@ -79,16 +79,16 @@ WSGI_APPLICATION = 'TRS.wsgi.application'
 # import pymysql# 一定要新增這兩行！通過pip install pymysql！
 # pymysql.install_as_MySQLdb()
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mis',
-        'User': 'qowp4',
-        'PASSWORD': '0966713066',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'mis',
+#         'User': 'qowp4',
+#         'PASSWORD': '0966713066',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
@@ -125,7 +125,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# 測試Static路徑
+# STATIC_ROOT = os.path.join(BASE_DIR , 'static')
+
+# STATICFILES_DIRS = [
+#     ("css" , os.path.join(STATIC_ROOT , "css")),
+#     ("js" , os.environ.get(STATIC_ROOT , "js")),
+
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

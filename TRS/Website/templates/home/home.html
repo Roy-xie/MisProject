@@ -37,9 +37,9 @@
         <div class="group">
           <div class="title">設立別</div>
           <div class="multi_select_box">
-            <select multiple title="請選擇公私立" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
-                <option value="">公立</option>
-                <option value="">私立</option>
+            <select multiple title="請選擇公私立" name="select_AB" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+                <option value="A">公立</option>
+                <option value="B">私立</option>
             </select>
           </div>
         </div>
@@ -61,11 +61,16 @@
           <div class="title">學校名稱</div>
           <div class="multi_select_box">
             <select multiple title="請選擇學校" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
-                <option value=""></option>
+                {% comment %} <option value="000012CE619E">{{school_list.0}}</option> {% endcomment %}
+                {% for schoolname in school_list %}
+                  <option value="">
+                    {{schoolname}}
+                  </option>
+                {% endfor %}
             </select>
           </div>
         </div>
-
+      
         
       </div>
       <div class="Right"></div>
