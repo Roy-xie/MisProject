@@ -1,0 +1,19 @@
+cd C:/xampp/mysql/bin
+
+mysql -uroot -p
+
+use mis
+
+source C:/Users/user/Downloads/misproject.sql
+
+
+
+utf8mb4_0900_ai_ci替换为utf8_general_ci
+utf8mb4替换为utf8
+
+
+
+
+
+https://www.w3help.cc/a/202106/207846.html
+https://blog.csdn.net/weixin_39309402/article/details/102570279

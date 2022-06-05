@@ -15,15 +15,17 @@
   
 </head>
 <body>
-
+<form  method="POST">
+  {% csrf_token %}
   <section>
     <div class="container">
       <div class="Left">
+      
         <!-- 學年 -->
         <div class="group">
           <div class="title">學年度</div>
           <div class="multi_select_box">
-            <select multiple title="請選擇學年度" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+            <select multiple title="請選擇學年度" name="year" type="year" id="year" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
                 <option value="">106</option>
                 <option value="">107</option>
                 <option value="">108</option>
@@ -37,7 +39,7 @@
         <div class="group">
           <div class="title">設立別</div>
           <div class="multi_select_box">
-            <select multiple title="請選擇公私立" name="select_AB" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+            <select multiple title="請選擇公私立" name="select_AB" type="select_AB" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
                 <option value="A">公立</option>
                 <option value="B">私立</option>
             </select>
@@ -48,7 +50,7 @@
         <div class="group">
           <div class="title">學制</div>
           <div class="multi_select_box">
-            <select multiple title="請選擇學制" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+            <select multiple title="請選擇學制" name="school_system" type="school_system" id="school_system" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
                 <option value="">一般大學</option>
                 <option value="">技專學校</option>
                 <option value="">宗教研修學校</option>
@@ -60,19 +62,21 @@
         <div class="group">
           <div class="title">學校名稱</div>
           <div class="multi_select_box">
-            <select multiple title="請選擇學校" name="" id="" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
+            <select multiple title="請選擇學校" name="school_name" type="school_name" id="school_name" class="multi_select w-100%" multiple data-selected-text-format="count > 5" multiple data-actions-box="true">
                 {% comment %} <option value="000012CE619E">{{school_list.0}}</option> {% endcomment %}
                 {% for schoolname in school_list %}
                   <option value="">
                     {{schoolname}}
                   </option>
                 {% endfor %}
+                <option value="000012CE619E">{{searchschool}}</option>
             </select>
           </div>
         </div>
-      
-        
+      <input type="submit" name="submit" style="margin-top:10px" method="POST"></input>
+      </form>
       </div>
+      
       <div class="Right"></div>
     </div>
   </section>
