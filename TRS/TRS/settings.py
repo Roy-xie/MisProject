@@ -42,12 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'Website',
-<<<<<<< Updated upstream
+
     # 'corsheaders',
     
-=======
     'app_tuition',
->>>>>>> Stashed changes
+
 ]
 
 MIDDLEWARE = [
@@ -95,7 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mis',
-        'User': 'test',
+        'User': 'user',
         'PASSWORD': '123',
         'HOST': '127.0.0.1',
         'PORT': '3306',
@@ -156,7 +155,7 @@ STATIC_ROOT = os.path.join(BASE_DIR , 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< Updated upstream
+
 # CORS_ALLOWED_ORIGINS = [
 # "http://localhost:8000",
 # "http://127.0.0.1:8000"
@@ -164,6 +163,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS_ALLOW_ALL_ORIGINS = True
 APPEND_SLASH=False
-=======
+
 CORS_ORIGIN_ALLOW_ALL = True
->>>>>>> Stashed changes
+
