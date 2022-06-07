@@ -4,6 +4,7 @@ from matplotlib.style import context
 from requests import request
 from sympy import re
 import pymysql
+from django.views.decorators.csrf import csrf_exempt
 
 
 def showlist(request):
@@ -25,21 +26,24 @@ def schoolsele(request):
     context["school_list"] = school_A
     return render(request , "home.html" , context)
 
+@csrf_exempt
 def dbsearch(request):
     conn = pymysql.connect(host='127.0.0.1' , port=3306, passwd='123', user = 'test',
     db='mis', )
     cursor=conn.cursor()
-    print(conn)
-    sql ="SELECT * FROM year110 LIMIT 1;"
-    cursor.execute(sql)
-    rows = cursor.fetchall()
-    # print(rows)
-    context = {}
-    for i in rows:
-        context["searchschool"] = i
+    # print(conn)
+    if request.method == "POST":
+        if request.POST.get('year'): 
+            sql ="SELECT * FROM year110 LIMIT 1;"
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            # print(rows)
+            context = {}
+            for i in rows:
+                context["searchschool"] = i
     cursor.close()
     conn.close()
-    return render(request , "home.html" , context)
+    return render(request , "home/home.html" , context)
 
 
 
