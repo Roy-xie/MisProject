@@ -21,5 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Website.urls')),
     path('schoolsele/' , views.schoolsele),
+<<<<<<< Updated upstream
     path('dbsearch/' , views.dbsearch),
+=======
+    path('tuition/', include('app_tuition.urls')),
+>>>>>>> Stashed changes
 ]

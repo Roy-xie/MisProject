@@ -14,7 +14,9 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +28,7 @@ SECRET_KEY = 'django-insecure-3&#4t-i^l3!bb(zjrs5#rs#_bvg3-%2-b(mr8r5nb)9v9mhh7l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,9 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'Website',
+<<<<<<< Updated upstream
     # 'corsheaders',
     
+=======
+    'app_tuition',
+>>>>>>> Stashed changes
 ]
 
 MIDDLEWARE = [
@@ -62,7 +69,8 @@ ROOT_URLCONF = 'TRS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\', '/')],
+        #'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\', '/')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,6 +103,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -123,6 +132,8 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
@@ -131,8 +142,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# 測試Static路徑
-# STATIC_ROOT = os.path.join(BASE_DIR , 'static')
+#測試Static路徑
+STATIC_ROOT = os.path.join(BASE_DIR , 'static')
 
 # STATICFILES_DIRS = [
 #     ("css" , os.path.join(STATIC_ROOT , "css")),
@@ -145,6 +156,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< Updated upstream
 # CORS_ALLOWED_ORIGINS = [
 # "http://localhost:8000",
 # "http://127.0.0.1:8000"
@@ -152,3 +164,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS_ALLOW_ALL_ORIGINS = True
 APPEND_SLASH=False
+=======
+CORS_ORIGIN_ALLOW_ALL = True
+>>>>>>> Stashed changes
