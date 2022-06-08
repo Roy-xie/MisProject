@@ -5,7 +5,7 @@ import pandas as pd
 def home(request):
     return render(request, 'app_tuition/home.html')
 
-dt_tuition = pd.read_csv('app_tuition/dataset/tuition_fee.csv', sep=',')
+dt_tuition = pd.read_csv('app_tuition/dataset/tuition_tuition.csv', sep=',')
 
 data={}
 for idx, row in dt_tuition.iterrows():

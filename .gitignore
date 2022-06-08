@@ -3,3 +3,4 @@ myenv
 __pycache__
 staticfiles
 db.sqlite3
+TRS/app_tuition/dataset/tuition_110.csv
