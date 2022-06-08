@@ -42,7 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'Website',
+
+    # 'corsheaders',
+    
     'app_tuition',
+
 ]
 
 MIDDLEWARE = [
@@ -86,16 +90,16 @@ WSGI_APPLICATION = 'TRS.wsgi.application'
 # import pymysql# 一定要新增這兩行！通過pip install pymysql！
 # pymysql.install_as_MySQLdb()
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'mis',
-#        'User': 'test',
-#        'PASSWORD': '123',
-#        'HOST': '127.0.0.1',
-#        'PORT': '3306',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mis',
+        'User': 'user',
+        'PASSWORD': '123',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
 
 
 
