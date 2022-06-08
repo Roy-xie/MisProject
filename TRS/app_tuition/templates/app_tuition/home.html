@@ -34,6 +34,12 @@
             > 
               <option>醫學系</option>
               <option>牙醫學系</option>
+              <option>醫學院</option>
+              <option>工學院</option>
+              <option>理農學院</option>
+              <option>商學院</option>
+              <option>文法學院</option>
+              <option>其他</option>
             </select>
             <small class="form-text text-muted">請選擇學系 </small>
           </div>
@@ -41,15 +47,15 @@
 
         <!--熱門詞多少個?form group-->
         <div class="form-group row">
-          <label class="col-md-3 form-control-label">多少個熱門詞?</label>
+          <label class="title">多少間學校?</label>
           <div class="col-md-9">
             <input
               id="topk-selected"
               name="topk"
-              value="10"
+              value="50"
               class="form-control form-control-success"
             />
-            <small class="form-text text-muted">內定值為10 </small>
+            <small class="form-text text-muted">內定值為50間 </small>
           </div>
         </div>
         <!--form group-->
@@ -67,10 +73,10 @@
       <div class="Right">
       
       <!-- 繪圖區塊--------------------------------------------------------->
-      <div class="col-lg-6 mb-5">
+      <div class="col-xs-6">
         <div class="card">
           <div class="card-header">
-            <h3 class="h6 text-uppercase mb-0">學費分佈</h3>
+            <h3 class="h6 text-uppercase mb-0">每一間學校的學費</h3>
           </div>
           <div class="card-body">
             <canvas id="mychart"></canvas>
